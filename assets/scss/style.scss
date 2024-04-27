@@ -345,33 +345,154 @@ html {
 
 header {
   width: 100vw;
+  padding: 1%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  img {
+    margin: 0 5%;
+    width: 52px;
+    height: 52px;
+  }
+
+  nav {
+    flex-basis: 80%;
 
   ul {
-    height: 12vh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
     align-items: center;
-    :first-child::before {
-      content: url(../images/leaf-logo.png);
-      position: absolute;
-      left: 2vw;
+    justify-content: space-evenly;
+
+    li {
+      list-style-type: none;
     }
+  } 
   }
+
 
   a {
     text-decoration: none;
     font-family: $fontmain;
     font-weight: 400;
     font-size: 1em;
-    line-height: 250%;
-    color: #263633;
+    color: $primary-color;
+
     &:hover {
       text-decoration: underline;
     }
   }
+
+  .burger-menu {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .burger-menu {
+    display: block;
+    position: fixed;
+    z-index: 5;
+    }
+
+      #menu__toggle {
+      opacity: 0;
+      }
+
+      #menu__toggle:checked ~ .menu__btn > span {
+      transform: rotate(45deg);
+      }
+
+      #menu__toggle:checked ~ .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0);
+      }
+
+      #menu__toggle:checked ~ .menu__btn > span::after {
+      top: 0;
+      width: 100%;
+      transform: rotate(90deg);
+      }
+
+      #menu__toggle:checked ~ .menu {
+      visibility: visible;
+      right: 0;
+      }
+      
+      .menu__btn {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 15px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      z-index: 4;
+        
+        span,
+        span::before,
+        span::after {
+          display: block;
+          position: absolute;
+          border-radius: 20px;
+          height: 4px;
+          transition-duration: .25s;
+          background-color: $accent-color2;
+        }
+
+        span {
+          width: 100%;
+        }
+
+        span::before {
+          width: 50%;
+          content: '';
+          top: -8px;
+        }
+
+        span::after {
+          width:50%;
+          right: 0;
+          content: '';
+          top: 8px;
+        }
+      }
+
+      .menu {
+      display: block;
+      position: fixed;
+      visibility: hidden;
+      top: 0;
+      right: -100%;
+      width: 40%;
+      margin: 0;
+      padding: 70px 0 20px 0;
+      border-radius: 0 0 0 30px;
+      background-color: rgb(252, 252, 251, 0.9);
+      box-shadow: 6px 6px 8px rgba(84, 46, 39, 0.17);
+      transition-duration: .25s;
+      z-index: 3;
+      }
+ 
+      .menu-link {
+      font-size: 15px;
+      font-weight: 400;
+      }
+
+      .menu__item {
+      display: block;
+      padding: 12px 24px;
+      transition-duration: .25s;
+      }
+    }
 }
+
+
 
 /* ХЭДЕР конец */
 

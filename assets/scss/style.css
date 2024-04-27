@@ -311,30 +311,129 @@ html {
 /* ХЭДЕР начало */
 header {
   width: 100vw;
-}
-header ul {
-  height: 12vh;
+  padding: 1%;
+  height: -moz-max-content;
+  height: max-content;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  list-style: none;
   align-items: center;
+  justify-content: space-between;
 }
-header ul :first-child::before {
-  content: url(../images/leaf-logo.png);
-  position: absolute;
-  left: 2vw;
+header img {
+  margin: 0 5%;
+  width: 52px;
+  height: 52px;
+}
+header nav {
+  flex-basis: 80%;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header nav ul li {
+  list-style-type: none;
 }
 header a {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1em;
-  line-height: 250%;
-  color: #263633;
+  color: #542e27;
 }
 header a:hover {
   text-decoration: underline;
+}
+header .burger-menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+  header .burger-menu {
+    display: block;
+    position: fixed;
+    z-index: 5;
+  }
+  header #menu__toggle {
+    opacity: 0;
+  }
+  header #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  header #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  header #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    width: 100%;
+    transform: rotate(90deg);
+  }
+  header #menu__toggle:checked ~ .menu {
+    visibility: visible;
+    right: 0;
+  }
+  header .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 4;
+  }
+  header .menu__btn span,
+  header .menu__btn span::before,
+  header .menu__btn span::after {
+    display: block;
+    position: absolute;
+    border-radius: 20px;
+    height: 4px;
+    transition-duration: 0.25s;
+    background-color: #0f9900;
+  }
+  header .menu__btn span {
+    width: 100%;
+  }
+  header .menu__btn span::before {
+    width: 50%;
+    content: "";
+    top: -8px;
+  }
+  header .menu__btn span::after {
+    width: 50%;
+    right: 0;
+    content: "";
+    top: 8px;
+  }
+  header .menu {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    margin: 0;
+    padding: 70px 0 20px 0;
+    border-radius: 0 0 0 30px;
+    background-color: rgba(252, 252, 251, 0.9);
+    box-shadow: 6px 6px 8px rgba(84, 46, 39, 0.17);
+    transition-duration: 0.25s;
+    z-index: 3;
+  }
+  header .menu-link {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  header .menu__item {
+    display: block;
+    padding: 12px 24px;
+    transition-duration: 0.25s;
+  }
 }
 
 /* ХЭДЕР конец */
