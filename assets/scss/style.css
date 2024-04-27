@@ -416,7 +416,7 @@ header .burger-menu {
     visibility: hidden;
     top: 0;
     right: -100%;
-    width: 40%;
+    width: 50%;
     margin: 0;
     padding: 70px 0 20px 0;
     border-radius: 0 0 0 30px;
