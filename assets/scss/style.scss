@@ -420,7 +420,7 @@ header {
 
       #menu__toggle:checked ~ .menu {
       visibility: visible;
-      right: 10px;
+      right: 0;
       }
       
       .menu__btn {
@@ -469,9 +469,9 @@ header {
       visibility: hidden;
       top: 0;
       right: -100%;
-      width: 50%;
+      width: 40%;
       margin: 0;
-      padding: 70px 0 20px 0;
+      padding: 80px 0 20px 0;
       border-radius: 0 0 0 30px;
       background-color: rgb(252, 252, 251, 0.9);
       box-shadow: 6px 6px 8px rgba(84, 46, 39, 0.17);
