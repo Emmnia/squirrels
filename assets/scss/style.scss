@@ -456,14 +456,13 @@ header {
         }
 
         span::before {
-          width: 40%;
+          width: 100%;
           content: '';
           top: -8px;
         }
 
         span::after {
-          width:40%;
-          right: 0;
+          width:100%;
           content: '';
           top: 8px;
         }
