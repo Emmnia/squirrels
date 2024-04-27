@@ -278,6 +278,7 @@ html {
   right: 10px;
   text-decoration: none;
   color: rgb(15, 153, 0, 0.5);
+  z-index: 4;
 
   &:hover {
     color: $accent-color2;
@@ -346,7 +347,7 @@ html {
 header {
   width: 100vw;
   padding: 1%;
-  height: max-content;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: space-between;
