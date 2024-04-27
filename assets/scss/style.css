@@ -418,7 +418,7 @@ header .burger-menu {
     right: -100%;
     width: 40%;
     margin: 0;
-    padding: 80px 0 20px 0;
+    padding: 60px 0 20px 0;
     border-radius: 0 0 0 30px;
     background-color: rgba(252, 252, 251, 0.9);
     box-shadow: 6px 6px 8px rgba(84, 46, 39, 0.17);
@@ -433,6 +433,12 @@ header .burger-menu {
     display: block;
     padding: 12px 24px;
     transition-duration: 0.25s;
+  }
+}
+@media screen and (max-width: 420px) {
+  header .menu {
+    width: 50%;
+    padding: 80px 0 20px 0;
   }
 }
 
