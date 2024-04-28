@@ -1011,6 +1011,11 @@ header .burger-menu {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 600px) {
+  .container-testimonials-main {
+    display: none;
+  }
+}
 
 .container-testimonials {
   position: relative;
@@ -1027,11 +1032,6 @@ header .burger-menu {
   position: relative;
   transform-style: preserve-3d;
   animation: slide 0.4s linear;
-}
-@media screen and (max-width: 600px) {
-  .container-testimonials .slide-container .slide {
-    padding: 40px;
-  }
 }
 
 @keyframes slide {
@@ -1097,31 +1097,13 @@ header .burger-menu {
   background-color: #fff;
   box-shadow: 4px 4px 5px 0 rgba(84, 46, 39, 0.7);
 }
-@media screen and (max-width: 600px) {
-  .container-testimonials #next,
-  .container-testimonials #prev {
-    background: none;
-    box-shadow: none;
-    width: 20px;
-  }
-}
 
 .container-testimonials #next {
   right: -50px;
 }
-@media screen and (max-width: 600px) {
-  .container-testimonials #next {
-    right: 15px;
-  }
-}
 
 .container-testimonials #prev {
   left: -50px;
-}
-@media screen and (max-width: 600px) {
-  .container-testimonials #prev {
-    left: 15px;
-  }
 }
 
 .container-testimonials #next:hover,
@@ -1129,12 +1111,29 @@ header .burger-menu {
   background-color: #dbf0d9;
   color: #fff;
 }
+
+.container-testimonials-mobile {
+  display: none;
+}
 @media screen and (max-width: 600px) {
-  .container-testimonials #next:hover,
-  .container-testimonials #prev:hover {
-    background-color: transparent;
-    color: #542e27;
+  .container-testimonials-mobile {
+    display: contents;
   }
+}
+.container-testimonials-mobile .swiper-container {
+  margin: 0 auto;
+}
+.container-testimonials-mobile .swiper-slide {
+  margin: 0 auto;
+  border-radius: 40px;
+  background-color: #fff;
+  box-shadow: 4px 4px 5px 0 rgba(84, 46, 39, 0.7);
+  max-width: 95vw;
+  padding: 20px;
+  margin: 10px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: slide 0.4s linear;
 }
 
 /* ПОДГОТОВКА К ВЫВОЗУ начало */

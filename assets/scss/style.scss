@@ -1009,6 +1009,10 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
 .container-testimonials {
@@ -1026,10 +1030,6 @@ header {
   position: relative;
   transform-style: preserve-3d;
   animation: slide 0.4s linear;
-
-  @media screen and (max-width: 600px) {
-    padding: 40px;
-  }
 }
 
 @keyframes slide {
@@ -1095,40 +1095,48 @@ header {
   border-radius: 50%;
   background-color: #fff;
   box-shadow: 4px 4px 5px 0 rgba(84, 46, 39, 0.7);
-
-  @media screen and (max-width: 600px) {
-    background: none;
-    box-shadow: none;
-    width: 20px;
-  }
 }
 
 .container-testimonials #next {
   right: -50px;
-
-  @media screen and (max-width: 600px) {
-    right: 15px;
-  }
 }
 
 .container-testimonials #prev {
   left: -50px;
-
-  @media screen and (max-width: 600px) {
-    left: 15px;
-  }
 }
 
 .container-testimonials #next:hover,
 .container-testimonials #prev:hover {
   background-color: $bg-color;
   color: #fff;
+}
+
+.container-testimonials-mobile {
+  display: none;
 
   @media screen and (max-width: 600px) {
-    background-color: transparent;
-    color: $primary-color;
+    display: contents;
+  }
+
+  .swiper-container {
+  margin: 0 auto;
+  }
+
+  .swiper-slide {
+  margin: 0 auto;
+  border-radius: 40px;
+    background-color: #fff;
+    box-shadow: 4px 4px 5px 0 rgba(84, 46, 39, 0.7);
+    max-width: 95vw;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: slide 0.4s linear;
   }
 }
+
+
 
 /* ПОДГОТОВКА К ВЫВОЗУ начало */
 
