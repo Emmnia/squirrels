@@ -1117,7 +1117,7 @@ header .burger-menu {
 }
 @media screen and (max-width: 600px) {
   .container-testimonials-mobile {
-    display: contents;
+    display: block;
   }
 }
 .container-testimonials-mobile .swiper-container {
